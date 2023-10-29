@@ -1,0 +1,27 @@
+<table>
+<td>Id</td>
+<td>email</td>
+<td>age</td>
+<td>actions</td>
+<td>classroom</td>
+<tr>
+{ % for i in response%}
+<tr>
+<td> {{i.id}} </td>
+<td> {{i.email}} </td>
+<td> {{i.age}} </td>
+<td> {{i.classroom}} </td>
+<td> 
+<a href={{path('update',{'id':i.id})}} >update
+<a href={{path('update',{'id':i.id})}} >Remove
+ </td>
+</tr>
+{ % endfor%}
+</table>
+
+
+{% for i in response %}
+    {{i.name}}
+    {{i.email}}
+    {{i.age}}
+{% endfor %}

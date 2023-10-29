@@ -1,0 +1,16 @@
+<h1> Bonjour {{n | upper}}  </h1>
+
+{% set x =5 %}
+{{x}}
+
+{{dump (auth)}}
+
+{% for t in auth %}
+    {{t.username}}
+    <img   src="{{asset ('t.picture')}}" >
+    {% if (t.nb_books>0) %}
+        <input type="submit" value="buy">
+    {% endif %}
+{% endfor %}
+
+{{auth[0].username}}
